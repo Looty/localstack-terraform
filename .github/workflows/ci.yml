@@ -10,6 +10,8 @@ jobs:
   terraform-test:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v3
+      
       - name: Start LocalStack
         run: |
           docker pull localstack/localstack         # Make sure to pull the latest version of the image
