@@ -1,4 +1,4 @@
-name: ci
+name: terratest
 on:
   workflow_dispatch:
   push:
@@ -27,5 +27,6 @@ jobs:
 
       - name: Run some Tests against LocalStack
         run: |
-          terraform test
-          echo "Test Execution complete!"          
+          cd test/
+          go test -count=1
+          echo "Test Execution complete!"
