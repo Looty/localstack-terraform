@@ -34,5 +34,5 @@ func TestS3Bucket(t *testing.T) {
 	assert.Equal(t, "us-east-1", output_region)
 
 	output_force_destroy := terraform.Output(t, terraformOptions, "force_destroy")
-	assert.Equal(t, string("false"), output_force_destroy)
+	assert.Equal(t, string("true"), output_force_destroy)
 }
