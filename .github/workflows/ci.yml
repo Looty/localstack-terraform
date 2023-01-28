@@ -16,7 +16,7 @@ jobs:
           localstack start -d                       # Start LocalStack in the background
           
           echo "Waiting for LocalStack startup..."  # Wait 30 seconds for the LocalStack container
-          localstack wait -t 30                     # to become ready before timing out 
+          sleep 30
           echo "Startup complete"   
 
       - uses: hashicorp/setup-terraform@v2
