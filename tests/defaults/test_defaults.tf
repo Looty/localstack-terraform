@@ -21,7 +21,7 @@ module "main" {
   # source is always ../.. for test suite configurations,
   # because they are placed two subdirectories deep under
   # the main module directory.
-  source = "../../module/bucket"
+  source = "../.."
 
   name          = ""
   force_destroy = false
