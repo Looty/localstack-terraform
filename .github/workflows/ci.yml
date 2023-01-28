@@ -13,7 +13,7 @@ jobs:
       - name: Start LocalStack
         run: |
           docker pull localstack/localstack         # Make sure to pull the latest version of the image
-          localstack start -d                       # Start LocalStack in the background
+          docker run --rm -d -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack
           
           echo "Waiting for LocalStack startup..."  # Wait 30 seconds for the LocalStack container
           sleep 30
